@@ -86,7 +86,8 @@
 				2D80FB071DB3AD5000AD71EF /* Sources */,
 				2D80FB081DB3AD5000AD71EF /* Frameworks */,
 				2D80FB091DB3AD5000AD71EF /* Resources */,
-				2D80FB231DB3B31900AD71EF /* ShellScript */,
+				2D80FB241DB3B96E00AD71EF /* ShellScript */,
+				2D80FB231DB3B31900AD71EF /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -146,7 +147,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2D80FB231DB3B31900AD71EF /* ShellScript */ = {
+		2D80FB231DB3B31900AD71EF /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -154,11 +155,25 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/ReSwift.framework",
 			);
+			name = "Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		2D80FB241DB3B96E00AD71EF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 

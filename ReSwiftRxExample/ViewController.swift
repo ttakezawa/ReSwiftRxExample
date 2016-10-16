@@ -7,18 +7,34 @@
 //
 
 import UIKit
+import ReSwift
 
-class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+class ViewController: UIViewController, StoreSubscriber {
+
+    @IBOutlet weak var label: UILabel!
+
+    override func viewWillAppear(_ animated: Bool) {
+        mainStore.subscribe(self)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillDisappear(_ animated: Bool) {
+        mainStore.unsubscribe(self)
     }
 
+    func newState(state: AppState) {
+        label.text = "\(state.counter)"
+    }
 
+    @IBAction func incrementButtonTapped(_ sender: AnyObject) {
+        mainStore.dispatch(
+            CounterActionIncrease()
+        )
+    }
+
+    @IBAction func decrementButtonTapped(_ sender: AnyObject) {
+        mainStore.dispatch(
+            CounterActionDecrease()
+        )
+    }
 }

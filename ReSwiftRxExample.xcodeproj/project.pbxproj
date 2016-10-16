@@ -13,6 +13,9 @@
 		2D80FB161DB3AD5000AD71EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D80FB151DB3AD5000AD71EF /* Assets.xcassets */; };
 		2D80FB191DB3AD5000AD71EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D80FB171DB3AD5000AD71EF /* LaunchScreen.storyboard */; };
 		2D80FB221DB3B2D500AD71EF /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D80FB211DB3B2D500AD71EF /* ReSwift.framework */; };
+		2D80FB271DB3BBB600AD71EF /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D80FB261DB3BBB600AD71EF /* AppState.swift */; };
+		2D80FB2A1DB3BE1A00AD71EF /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D80FB291DB3BE1A00AD71EF /* CounterReducer.swift */; };
+		2D80FB2D1DB3BFCF00AD71EF /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D80FB2C1DB3BFCF00AD71EF /* Actions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		2D80FB181DB3AD5000AD71EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D80FB1A1DB3AD5000AD71EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D80FB211DB3B2D500AD71EF /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
+		2D80FB261DB3BBB600AD71EF /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		2D80FB291DB3BE1A00AD71EF /* CounterReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
+		2D80FB2C1DB3BFCF00AD71EF /* Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 		2D80FB0D1DB3AD5000AD71EF /* ReSwiftRxExample */ = {
 			isa = PBXGroup;
 			children = (
+				2D80FB2B1DB3BFAD00AD71EF /* Actions */,
+				2D80FB281DB3BDE300AD71EF /* Reducers */,
+				2D80FB251DB3BB9100AD71EF /* State */,
 				2D80FB0E1DB3AD5000AD71EF /* AppDelegate.swift */,
 				2D80FB101DB3AD5000AD71EF /* ViewController.swift */,
 				2D80FB121DB3AD5000AD71EF /* Main.storyboard */,
@@ -74,6 +83,30 @@
 				2D80FB211DB3B2D500AD71EF /* ReSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2D80FB251DB3BB9100AD71EF /* State */ = {
+			isa = PBXGroup;
+			children = (
+				2D80FB261DB3BBB600AD71EF /* AppState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		2D80FB281DB3BDE300AD71EF /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				2D80FB291DB3BE1A00AD71EF /* CounterReducer.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		2D80FB2B1DB3BFAD00AD71EF /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				2D80FB2C1DB3BFCF00AD71EF /* Actions.swift */,
+			);
+			path = Actions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +215,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D80FB2D1DB3BFCF00AD71EF /* Actions.swift in Sources */,
+				2D80FB271DB3BBB600AD71EF /* AppState.swift in Sources */,
+				2D80FB2A1DB3BE1A00AD71EF /* CounterReducer.swift in Sources */,
 				2D80FB111DB3AD5000AD71EF /* ViewController.swift in Sources */,
 				2D80FB0F1DB3AD5000AD71EF /* AppDelegate.swift in Sources */,
 			);

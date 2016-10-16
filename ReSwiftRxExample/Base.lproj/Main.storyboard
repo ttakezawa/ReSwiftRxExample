@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ReSwiftRxExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +18,38 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZM-M7-f8x">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qo9-3e-vYx">
+                                <state key="normal" title="Increment"/>
+                                <connections>
+                                    <action selector="incrementButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="89h-bD-l86"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwT-Xm-fWq">
+                                <state key="normal" title="Decrement"/>
+                                <connections>
+                                    <action selector="decrementButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a1f-aV-EeL"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qo9-3e-vYx" firstAttribute="top" secondItem="zZM-M7-f8x" secondAttribute="bottom" constant="8" symbolic="YES" id="Al8-DF-Nfn"/>
+                            <constraint firstItem="CwT-Xm-fWq" firstAttribute="baseline" secondItem="Qo9-3e-vYx" secondAttribute="baseline" id="Ggu-Rp-3nX"/>
+                            <constraint firstItem="CwT-Xm-fWq" firstAttribute="leading" secondItem="Qo9-3e-vYx" secondAttribute="trailing" constant="8" symbolic="YES" id="SNe-mB-w01"/>
+                            <constraint firstItem="zZM-M7-f8x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bXm-5x-O3g"/>
+                            <constraint firstItem="zZM-M7-f8x" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="i6J-qu-aoO"/>
+                            <constraint firstItem="Qo9-3e-vYx" firstAttribute="leading" secondItem="zZM-M7-f8x" secondAttribute="leading" id="zaU-RR-Hie"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="zZM-M7-f8x" id="ZFO-mG-09U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -16,6 +16,7 @@
 		2D80FB271DB3BBB600AD71EF /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D80FB261DB3BBB600AD71EF /* AppState.swift */; };
 		2D80FB2A1DB3BE1A00AD71EF /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D80FB291DB3BE1A00AD71EF /* CounterReducer.swift */; };
 		2D80FB2D1DB3BFCF00AD71EF /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D80FB2C1DB3BFCF00AD71EF /* Actions.swift */; };
+		2DDF73181DBD211F00628176 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DDF73171DBD211F00628176 /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		2D80FB261DB3BBB600AD71EF /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		2D80FB291DB3BE1A00AD71EF /* CounterReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
 		2D80FB2C1DB3BFCF00AD71EF /* Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		2DDF73171DBD211F00628176 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DDF73181DBD211F00628176 /* RxSwift.framework in Frameworks */,
 				2D80FB221DB3B2D500AD71EF /* ReSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +83,7 @@
 		2D80FB201DB3B2D500AD71EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2DDF73171DBD211F00628176 /* RxSwift.framework */,
 				2D80FB211DB3B2D500AD71EF /* ReSwift.framework */,
 			);
 			name = Frameworks;
@@ -187,6 +191,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/ReSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 			);
 			name = "Run Script";
 			outputPaths = (

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D15237F1DBD039A0022878E /* ReSwift+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D15237E1DBD039A0022878E /* ReSwift+Rx.swift */; };
 		2D80FB0F1DB3AD5000AD71EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D80FB0E1DB3AD5000AD71EF /* AppDelegate.swift */; };
 		2D80FB111DB3AD5000AD71EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D80FB101DB3AD5000AD71EF /* ViewController.swift */; };
 		2D80FB141DB3AD5000AD71EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D80FB121DB3AD5000AD71EF /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D15237E1DBD039A0022878E /* ReSwift+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReSwift+Rx.swift"; sourceTree = "<group>"; };
 		2D80FB0B1DB3AD5000AD71EF /* ReSwiftRxExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReSwiftRxExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D80FB0E1DB3AD5000AD71EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D80FB101DB3AD5000AD71EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				2D80FB151DB3AD5000AD71EF /* Assets.xcassets */,
 				2D80FB171DB3AD5000AD71EF /* LaunchScreen.storyboard */,
 				2D80FB1A1DB3AD5000AD71EF /* Info.plist */,
+				2D15237E1DBD039A0022878E /* ReSwift+Rx.swift */,
 			);
 			path = ReSwiftRxExample;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			files = (
 				2D80FB2D1DB3BFCF00AD71EF /* Actions.swift in Sources */,
 				2D80FB271DB3BBB600AD71EF /* AppState.swift in Sources */,
+				2D15237F1DBD039A0022878E /* ReSwift+Rx.swift in Sources */,
 				2D80FB2A1DB3BE1A00AD71EF /* CounterReducer.swift in Sources */,
 				2D80FB111DB3AD5000AD71EF /* ViewController.swift in Sources */,
 				2D80FB0F1DB3AD5000AD71EF /* AppDelegate.swift in Sources */,

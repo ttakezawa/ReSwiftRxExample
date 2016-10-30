@@ -8,20 +8,28 @@
 
 import UIKit
 import ReSwift
+import RxSwift
 
 let mainStore = Store<AppState>(
     reducer: CounterReducer(),
     state: nil
 )
 
+let rxStore = RxStore(store: mainStore)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    private let disposeBag = DisposeBag()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        rxStore.subscribe(onNext: {
+            print("next", $0)
+        }).addDisposableTo(disposeBag)
+
         return true
     }
 
